@@ -16,4 +16,14 @@ function completeTask(event) {
     task.classList.toggle('Done');
 }
 
-li.addEventListner('click', doneTask);
+li.addEventListner('click', taskDone);
+
+function deleteTask(event) {
+    const task = event.target.parentElement;
+    todoList.removeChild(task);
+}
+
+const deleteButton = document.createElement('button');
+deleteButton.textContent = 'Delete';
+deleteButton.addEventListener('click', deleteTask);
+li.appendChild(deleteButton);

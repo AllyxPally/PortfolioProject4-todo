@@ -10,3 +10,10 @@ function newAddition() {
         todoInput.value = '';
     }
 }
+
+function completeTask(event) {
+    const task = event.target;
+    task.classList.toggle('Done');
+}
+
+li.addEventListner('click', doneTask);
